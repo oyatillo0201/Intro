@@ -74,6 +74,11 @@ img {
   height: auto;
 }
 
+*:focus {
+  outline: 2px dotted var(--purple);
+  outline-offset: 3px;
+}
+
 /* CONTAINER */
 .container {
   width: 100%;
@@ -153,83 +158,67 @@ img {
 }
 
 
-
-
-/* PROMO */
-.promo {
+/* SIGNUP-FORM */
+.signup-form {
+  width: 100%;
+  max-width: 570px;
+  margin-left: 12px;
+  padding: 55px 60px 40px;
+  border-radius: 20px;
+  overflow: hidden;
   background-color: #fff;
-}
-.promo-container {
 
 }
-.action {
-  margin: 0;
-  padding: 0;
-  padding-top: 55px;
-  padding-right: 60px;
-  padding-bottom: 40px;
-  padding-left: 60px;
+.signup-form-heading {
+  margin-top: 0;
+  margin-bottom: 65px;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 600;
 }
 
-.action-heading {
-padding: 0;
-margin: 0;
-margin-bottom: 79px;
-font-weight: bold;
-font-size: 42px;
-line-height: 108%;
+.signup-form-fields {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
 }
 
-.user-name {
+.signup-form-field {
+  padding-top: 15px;
+  padding-bottom: 14px;
+  border: 0;
+  border-bottom: 1px solid #555;
+  color: #555;
+}
+
+.signup-form-field:focus {
+  border-color: #000;
+  font-weight: 600;
+  color: #000;
+}
+
+.signup-form-field:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.signup-form-sumbit {
   display: block;
+  width: 100%;
+  padding: 20px;
+  font-weight: 600;
   border: 0;
-  border-bottom: 1px solid #000;
-  padding-bottom: 11px;
-  margin-bottom: 35px;
-}
-
-.user-last-name {
-  display: block;
-  border: 0;
-  border-bottom: 1px solid #000;
-  padding-bottom: 11px;
-  margin-bottom: 35px;
-}
-.user-email {
-  display: block;
-  border: 0;
-  border-bottom: 1px solid #000;
-  padding-bottom: 11px;
-  margin-bottom: 35px;
-}
-
-.user-pass {
-  display: block;
-  border: 0;
-  border-bottom: 1px solid #000;
-  padding-bottom: 11px;
-}
-
-.footer-action {
-  margin: 0;
-  margin-top: 63px;
-  margin-left: 60px;
-  padding: 0;
-}
-
-
-.button {
-  margin: 0;
-  padding: 0;
-  padding: 20px 149px;
-  background-color: #655AF2;
-  border: 0;
+  margin-bottom: 8px;
   border-radius: 10px;
-  font-size: 16px;
-  line-height: 19px;
+  background-color: var(--purple);
   color: #fff;
+  cursor: pointer;
 }
-.footer-action-heading {
-  font-weight: 500;
+.signup-form-notice {
+  font-size: 11px;
   line-height: 15px;
+  text-align: center;
+}
+.signup-form-notice-link {
+  font-weight: 500;
+  color: var(--red);
 }
